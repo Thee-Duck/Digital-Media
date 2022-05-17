@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>my grid page</title>
+  <style>
+    .container {  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header ."
+    "Side-Left Center- Center- Side-Right"
+    "Large-Left Large-Left Large-Left Smol-Right-Square"
+    "Smol-Left-Square- Large-Right Large-Right Large-Right"
+    "Hello Hello World World"
+    "What\'re You Doing Here";
+}
+
+.Header {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: Header;
+}
+
+.Side-Left {
+  grid-area: Side-Left;
+background:#35bcde }
+
+.Side-Right { grid-area: Side-Right; }
+
+.Center- { grid-area: Center-; }
+
+.Large-Left { grid-area: Large-Left; }
+
+.Large-Right { grid-area: Large-Right; }
+
+.Smol-Left-Square- { grid-area: Smol-Left-Square-; }
+
+.Smol-Right-Square { grid-area: Smol-Right-Square; }
+
+.Hello { grid-area: Hello; }
+
+.World { grid-area: World; }
+
+.What\'re { grid-area: What\'re; }
+
+.You { grid-area: You; }
+
+.Doing { grid-area: Doing; }
+
+.Here { grid-area: Here; }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <div class="Header"></div>
+  <div class="Side-Left"><h1>CSS Grid</h1></div>
+  <div class="Side-Right"></div>
+  <div class="Center-"></div>
+  <div class="Large-Left"></div>
+  <div class="Large-Right"></div>
+  <div class="Smol-Left-Square-"></div>
+  <div class="Smol-Right-Square"></div>
+  <div class="Hello"></div>
+  <div class="World"></div>
+  <div class="What\'re"></div>
+  <div class="You"></div>
+  <div class="Doing"></div>
+  <div class="Here"></div>
+</div>
+</body>
+
+</html>
